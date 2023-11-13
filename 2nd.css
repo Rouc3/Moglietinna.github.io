@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #2f3542;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Times New Roman";
+
+ }
+
+ .note{
+    bottom: 15%;
+    left: 20%;
+    position: absolute;
+ }
+
+ 
+ .animated-text{
+     font-size: 20px;
+     font-weight: 600;
+     min-width: 200px;
+
+ }
+ 
+ .btn{
+   bottom: 30%;
+    left: 47%;
+    height: 30px ;
+    width: 60;
+    position: absolute;
+ }
+ .animated-text span{
+     position: relative;
+ }
+
+ .animated-text span::before{
+    content: "I love you the most";
+    color: #94fc03;
+    animation: words 20s infinite; 
+ }
+ .animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #2f3542;
+    border-left: 2px solid #94fc03 ;
+    right: -8px;
+    animation: cursor .5s infinite, typing 20s steps(14) infinite;
+ }
+
+ @keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000 ;
+    }
+ }
+
+ @keyframes words {
+    0%,20%{
+        content:"Hi po eto yung sinasabing deadline today 11:59 hehe.........";
+    }
+    21%,40%{
+        content:"Since wala na me maisip na gift I made this for you";
+    }
+    41%,60%{
+        content:"It's a modern letter(?) ig AHHAHAHHA";
+    }
+    61%,80%{
+        content:"Pero I hope you will like it";
+    }
+    81%,100%{
+        content:"I love you so much kindly press the button po";
+    }    
+ }
+
+ @keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+ }
+
+ 
+ 
+ 
